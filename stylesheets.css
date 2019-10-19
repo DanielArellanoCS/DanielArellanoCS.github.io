@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*
+Style Sheet for PORTFOLIO
+Daniel Arellano
+October 18
+*/
+
+/* Background */
+body {
+	background-color: aqua;
+}
+	/*
+	h1
+	h2*/
+	nav ul {
+		background-color: white;
+		list-height: 3.5em;
+		list-style-type: none;
+		padding-left: 0.5em;
+	}
+	nav ul li a {
+		color:white;
+		text-decor: none;
+}
