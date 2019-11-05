@@ -81,7 +81,7 @@ function buyUpgrade1(){
 */
 function allocateWorkers(allocateChoice){
 	if (allocateChoice == "wood cutter add"){
-			if (workers > 0) && (totalWorkers <= maxWorkers){
+			if ((workers > 0) && (totalWorkers <= maxWorkers)){
 				workers = workers-1;
 				woodCutter = woodCutter+1;
 				allocatedWorkers +=1;
