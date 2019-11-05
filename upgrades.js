@@ -36,7 +36,8 @@
 		cost: 10,
 		//intCost: 10,
 		costMult: 1.2,
-		resourcePerSecond : .3
+		resourcePerSecond : .3,
+		initRPS : .3
 
 	}
 	//var manyResources;
@@ -62,13 +63,13 @@
 		
 		
 	}
-	
+
 	function buyUpgrade(upgradeName){
 				if(upgradeName == "up1")
 			{
 				if(wood >= axe.cost){
 					count = count +1;
-					axe.resourcePerSecond = (axe.resourcePerSecond*count).toFixed(2);
+					axe.resourcePerSecond = (axe.initRPS*count).toFixed(2);
 					updateResource(axe.resourcePerSecond);
 					wood = wood - axe.cost;
 					document.getElementById("wood").innerHTML= wood.toFixed(2);

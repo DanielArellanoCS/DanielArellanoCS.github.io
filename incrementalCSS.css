@@ -168,13 +168,11 @@ p{
 	left: 50px;
 	width:200px;
 }
-.tooltip:hover .tooltiptext:hover{
+.tooltip:hover .tooltiptext:hover{/*Hides the tooltip when you hover over the tooltip*/
 	visibility: hidden;
 	display: none;
 	transition: opacity 0.3s;
 }
-.tooltip h1,h2,h3,h4,h5,h6,h7{
-	visibility: hidden;}
 .tooltip:hover h1{/*header*/
 	visibility: visible;
 	color:#858080;
