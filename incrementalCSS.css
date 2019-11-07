@@ -18,30 +18,34 @@ h1{
     display: inline-block;
     margin-top: 4px;
 }
+#topRow{
+	max-width: 100%;
+	min-height: 5px;
 
+}
 #leftColumn {
-    width: 20%;
-    max-width: 400px;
-    min-width: 300px;
+	min-height: 300px;
+    min-width: 15%;
     padding-right: 20px;
-
-    overflow-y: auto;
-    overflow-x: hidden;
+	margin-top:30px;
+    overflow-y: visible;
+    overflow-x: visible;
 }
 
 #midColumn {
-    width: 700px;
-	height: 1000px;
-    overflow-y: auto;
-    overflow-x: hidden;
+    min-width: 600px;
+	min-height: 300px;
+    overflow-y: visible;
+    overflow-x: visible;
     margin-top: 30px;
 }
 
 #rightColumn {
-    width: 150px;
+	min-height: 300px;
+    min-width: 25%;
     vertical-align: top;
     padding-left: 8px;
-    top: 20px;
+    margin-top:30px;
     position: relative;
 }
 table, th ,td {
@@ -51,7 +55,7 @@ border: 0px;
 	background-color: inherit;
 	cursor: pointer;
 	padding: 5px 30px;
-	min-width: 200px;
+	min-width: 180px;
 	max-width: 800px;
 	
 }
