@@ -60,7 +60,6 @@ function createWorker(){
 		if (food >= foodCost){
 			totalWorkers = totalWorkers+1;
 			workers = workers +1;
-			totalWorkers = totalWorkers +1;
 			food = food - foodCost;
 			document.getElementById("addWorker").innerHTML = workers;
 			document.getElementById("food").innerHTML = food;

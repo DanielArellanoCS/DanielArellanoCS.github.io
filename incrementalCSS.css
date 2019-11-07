@@ -2,13 +2,8 @@
 /* CSS Document */
 
 
-
 h1{
-  display: inline;
-  font-size: 12pt;
-  margin-left: 0;
-  margin-right: 0;
- font-weight: normal;
+  font-size: 16pt;
 }
 
 #game.centered {

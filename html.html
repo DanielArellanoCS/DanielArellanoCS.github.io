@@ -14,13 +14,11 @@
 		<div id="leftColumn" style="padding-left: 10px" align="left" class="column">
 		
 			
-			<p>          Resources</p>
-			.
-			.
+			<h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resources</p><br></h1>
 			
-		<p>Wood: <span id="wood">0</span>/<span id="maxWood"></span></p>
-	    <p>Food: <span id="food">0</span>/<span id="maxFood"></span></p>
-		<p>Workers: <span id="addWorker">1</span>/<span id="maxWorkers"></span></p>
+		<p>Wood: <span id="wood">0</span>/<span id="maxWood">infinity</span></p>
+	    <p>Food: <span id="food">0</span>/<span id="maxFood">infinity</span></p>
+		<p>Workers: <span id="addWorker">1</span>/<span id="maxWorkers">5</span></p>
 			
 	</div>
 	
@@ -30,13 +28,13 @@
 		
 		<!-- Tab links -->
 		<div class="tab">
-		  <button id   ="startTab" class="tablinks" onclick="openCity(event, 'London')">Main</button>
-		  <button class="tablinks" onclick="openCity(event, 'Paris')">Tab 2</button>
-		  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tab 3</button>
+		  <button id   ="startTab" class="tablinks" onclick="openTab(event, 'main')">Manager</button>
+		  <button class="tablinks" onclick="openTab(event, 'allocate')">Village</button>
+		  <button class="tablinks" onclick="openTab(event, 'empty')">Tab 3</button>
 		</div>
 
 		<!-- Tab content -->	
-		<div id="London" class="tabcontentStart">
+		<div id="main" class="tabcontentStart">
 			<table width="200" border="1">
   <tbody class="main">
     <tr>
@@ -93,7 +91,7 @@
 	
 		</div>
 
-		<div id="Paris" class="tabcontent">
+		<div id="allocate" class="tabcontent">
 <table width="268" height="170" border="1">
 	  <tbody class = "allocate">
 		  <tr>
@@ -125,9 +123,9 @@
 	</table>
 		</div>
 
-		<div id="Tokyo" class="tabcontent">
-		  <h3>Tokyo</h3>
-		  <p>Tokyo is the capital of Japan.</p>
+		<div id="empty" class="tabcontent">
+		  <h3>empty</h3>
+		  <p>empty</p>
 		</div>	
 			</div>
 	<div id="rightColumn" style="padding-left: 10px" align="left" class="column">
