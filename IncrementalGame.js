@@ -24,6 +24,7 @@ function resource (resource){
 function cutWoodDef(){
 	wood = wood +1;
 	document.getElementById("wood").innerHTML = wood.toFixed(2);
+	displayLog("Gathered wood!");
 
 }
 
@@ -42,6 +43,7 @@ function gatherFood(){
 	food = food + workers*(woodUpgrades);
 	document.getElementById("food").innerHTML = food;
 	console.log("Debug: Gathered Food")
+	displayLog("collected " + workers + " food");
 }
 
 
@@ -65,12 +67,15 @@ function createWorker(){
 			document.getElementById("food").innerHTML = food;
 			foodCost = foodCost*1.8;
 			console.log("Debug: Worker added");
+			displayLog("Worker Added");
 		}
 		else{
 			console.log("Debug: Error: Not enough food!");
+			displayLog("Not enough food");
 	}}
 	else{
 	console.log("Debug: Reached max workers!");
+		displayLog("You don't have enough houses!");
 }}
 /*
 function buyUpgrade1(){
@@ -85,13 +90,15 @@ function allocateWorkers(allocateChoice){
 				woodCutter = woodCutter+1;
 				allocatedWorkers +=1;
 				document.getElementById("woodCutter").innerHTML = woodCutter;
-				console.log("Debug: Worker Added");
 				document.getElementById("addWorker").innerHTML = workers;
+				console.log("Debug: Worker Added");
+				displayLog("Worker Added");
 				specResourcesUpdate(allocatedWorkers);
 				//updateButton("WC",1);
 			}
 			else{
 				console.log("Debug: Not enough workers!");
+				displayLog("Not enough workers");
 			}
 		
 	}
@@ -104,10 +111,12 @@ function allocateWorkers(allocateChoice){
 				document.getElementById("woodCutter").innerHTML = woodCutter;
 			  	document.getElementById("addWorker").innerHTML = workers;
 				console.log("Debug: Worker removed");
+			 	displayLog("Worker removed");
 				
 			}
 		else{
 			console.log("Debug: You have no more workers to remove!");
+			displayLog("You have no more workers to remove!");
 			}
 
 	}
@@ -170,5 +179,16 @@ function updateButton(type, workers /*, food, wood, workers, maxWorkers*/){
 			}
 		}
 	}
+function displayLog(nextLog){
+	var para = document.createElement("p");
+	var node = document.createTextNode("- "+ nextLog);
+	para.appendChild(node);
+	var element = document.getElementById("rightColumn");
+	var child = document.getElementById("SpanLog");
+	element.insertBefore(para,child);
+
+	$('#rightColumn').scrollTop($('#rightColumn')[0].scrollHeight);
+	//document.getElementById("Log").innerHTML = (display1 +" "+ nextLog);
 	
+}
 

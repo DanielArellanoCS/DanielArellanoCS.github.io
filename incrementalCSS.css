@@ -42,11 +42,14 @@ h1{
 
 #rightColumn {
 	min-height: 300px;
+	max-height: 300px;
     min-width: 25%;
     vertical-align: top;
     padding-left: 8px;
     margin-top:30px;
     position: relative;
+	overflow-x: hidden;
+	overflow-y:scroll;
 }
 table, th ,td {
 border: 0px;
