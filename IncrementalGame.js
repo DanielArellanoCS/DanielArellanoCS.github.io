@@ -9,6 +9,8 @@ var f = 0;
 */
 var woodUpgrades=1;
 var maxWorkers = 5;
+var maxWood = 50;
+var maxFoood = 150;
 var totalWorkers =1;
 var foodCost=5;
 var allocatedWorkers = 0;
@@ -22,10 +24,17 @@ function resource (resource){
 	
 }
 function cutWoodDef(){
+	if(wood < maxWood){
 	wood = wood +1;
 	document.getElementById("wood").innerHTML = wood.toFixed(2);
 	displayLog("Gathered wood!");
-
+	}
+	else{
+		var temp = (wood-maxWood);
+		wood = wood - temp;
+		temp = 0;
+		displayLog("Build more (temp) Storage to increase wood supply!");
+	}
 }
 
 function displayMaxResources(resource){
@@ -34,9 +43,22 @@ function displayMaxResources(resource){
 }
 
 function cutWood(workers){
+	if(wood < maxWood){
 	wood = wood + (workers * (woodUpgrades));
+		if (wood >= maxWood){
+			var temp = (wood-maxWood);
+			document.getElementById("wood").innerHTML = wood.toFixed(2);
+			wood = wood - temp;
+			temp = 0;
+		}
 	document.getElementById("wood").innerHTML = wood.toFixed(2);
-	console.log("Debug: Wood Cut!");
+	}
+	else if (wood >= maxWood){
+		var temp = (wood-maxWood);
+		document.getElementById("wood").innerHTML = wood.toFixed(2);
+		wood = wood - temp;
+		temp = 0;
+}
 }
 
 function gatherFood(){

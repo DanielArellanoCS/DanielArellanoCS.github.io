@@ -24,6 +24,7 @@
 			if(resource >= cost){
 				axe.count = axe.count+1;
 				axe.cost = axe.cost*axe.costMult;
+			} else {
 			}
 		}
 		
@@ -73,9 +74,15 @@
 					updateResource(axe.resourcePerSecond);
 					wood = wood - axe.cost;
 					document.getElementById("wood").innerHTML= wood.toFixed(2);
+					displayLog("Bought axe!");
 					axe.cost = axe.cost*axe.costMult;
 				}
+				else
+				{	
+					var setFixed = (axe.cost - wood);
+					displayLog("You need " + setFixed.toFixed(2) + " wood");
 				}
+			}
 				
 			}
 

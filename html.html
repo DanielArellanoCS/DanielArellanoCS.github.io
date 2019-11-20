@@ -3,16 +3,31 @@
 <head>
 <meta charset="utf-8">
 	<link rel="stylesheet" href="incrementalCSS.css">
-	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.14.1/dojo/dojo.js"></script>
-<title>Untitled Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Game</title>
 </head>
 
 <body>
 	<script type="text/javascript" src="progression.js"></script>
+	<script type="text/javascript" src="IncrementalGame.js"></script>
 	<script type="text/javascript" src="time.js"></script>
 	<script type="text/javascript" src="core.js"></script>
 	<script type="text/javascript" src="upgrades.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	
+	<script type="text/javascript">
+
+    $(document).ready(function () {
+		maxResource("Wood");
+		maxResource("Food");
+		//make it so resources per second shows up here too
+		//and make css so resource per second is shown on the right side of left column
+    });
+</script>
+	
+	
+	
+	
 	<div id="topRow" style="border: 1px solid #ccc">
 	Idle game by Dannie
 	
@@ -20,10 +35,10 @@
 	<div id="leftColumn" style="border: 1px solid #ccc" align="left" class="column">
 		
 			
-			<h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resources</p><br></h1>
+			<h1><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resources</p></h1>
 			
-		<p>Wood: <span id="wood">0</span>/<span id="maxWood">infinity</span></p>
-	    <p>Food: <span id="food">0</span>/<span id="maxFood">infinity</span></p>
+		<p>Wood: <span id="wood">0</span>/<span id="maxWood">0</span></p>
+	    <p>Food: <span id="food">0</span>/<span id="maxFoood">0</span></p>
 		<p>Workers: <span id="addWorker">1</span>/<span id="maxWorkers">5</span></p>
 			
 	</div>
@@ -100,6 +115,7 @@
 		<div id="allocate" class="tabcontent">
 <table width="268" height="170" border="1">
 	  <tbody class = "allocate">
+		  <h3>Workers: <span id ="addWorker">1</span>/<span id = "maxWorkers">5</span></h3>
 		  <tr>
 		  <td>Food Gatherers</td>
 		  <td>&nbsp;</td>
