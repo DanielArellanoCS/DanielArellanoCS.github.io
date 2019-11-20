@@ -18,8 +18,10 @@
 	<script type="text/javascript">
 
     $(document).ready(function () {
+		hideAllButtons();
 		maxResource("Wood");
 		maxResource("Food");
+		document.getElementById("woodButton").style.display = "visible";
 		//make it so resources per second shows up here too
 		//and make css so resource per second is shown on the right side of left column
     });
@@ -58,14 +60,15 @@
 		<div id="main" class="tabcontentStart">
 			<table width="200" border="1">
   <tbody class="main">
+	
     <tr>
-      <td><div class="tooltip"><button onClick="gatherFood()">Discover Food!</button>
+      <td id="foodButton"><div class="tooltip"><button onClick="gatherFood()">Discover Food!</button>
 				<h1 class="tooltiptext">You found an apple tree!</h1>
 				</div></td>
-      <td><div class="tooltip"><button onClick="cutWoodDef()">Cut Wood</button>
+      <td id="woodButton"><div class="tooltip"><button onClick="cutWoodDef()">Cut Wood</button>
 				<h1 class="tooltiptext">Gather wood to create structures!</h1>
 				</div></td>
-      <td><div class="tooltip"><button onClick="createWorker()">Create Worker</button>
+      <td id="workerButton"><div class="tooltip"><button onClick="createWorker()">Create Worker</button>
 				<h1 class="tooltiptext">Start expanding your colony!</h1>
 				</div></td>
     </tr>

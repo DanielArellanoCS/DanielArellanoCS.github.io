@@ -6,7 +6,7 @@
 
 
 function hideAllButtons{
-	document.getElementsByClassName("Button").style.visibility = "hidden";
+	document.getElementsByClassName("main").style.visibility = "hidden";
 	
 	
 }

@@ -28,10 +28,14 @@ function openTab(evt, cityName) {
 
 
 
-function demand(resource, ){
-	
-	
-	
+function demand(resource){
+	if (resource == "food"){
+		foodReduction = setInterval{
+			
+		}
+		
+		
+	}
 }
 
 
